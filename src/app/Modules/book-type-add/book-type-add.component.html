@@ -1,0 +1,9 @@
+<form action="" >
+    <div class="form-group">
+        <label for="name" >Name</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="bookType.book_type_name">
+    </div>
+    <div class="btn btn-primary btn-sm mt-4" (click)= "addBookType()"> Submit </div>
+    <div class="btn btn-primary btn-sm mt-4" [routerLink]="['/bookTypes']"> Back </div>
+</form>
+

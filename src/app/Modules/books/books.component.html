@@ -1,0 +1,33 @@
+
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th scope ="col">ID</th>
+    <th scope ="col">Name</th>
+    <th scope ="col">Author</th>
+    <th scope ="col">Type</th>
+    <th><button type="submit"class="btn btn-info btn-sm"[routerLink]="['/add-book']">          
+         Create Book
+    </button></th>
+  </tr>
+</thead>
+
+<tbody>
+    <tr *ngFor="let book of books">
+        <th scope="row">{{book.id}}</th>
+        <td scope="row">{{book.name}}</td>
+        <td scope="row">{{book.author}}</td>
+        <td scope="row">{{book.book_type}}</td>
+        <td >
+          <button class="btn btn-primary btn-sm" routerLink ="/edit-book/{{ book.id }}">
+           <span> Edit</span>
+          </button>
+        </td>
+        <td>
+           <button  class="btn btn-danger btn-sm" (click)="deleteBook(book.id)">
+           <span>Delete </span>
+           </button>
+        </td>
+    </tr>
+</tbody>
+</table>
